@@ -1,12 +1,14 @@
 @model firstASP.Models.Product
 
 @{
-    ViewData["Title"] = "Add Product";
+    ViewData["Title"] = "Edit Product";
 }
 
-<h1>Add Product</h1>
+<h1>Edit Product</h1>
 
-<form asp-action="Create" method="post">
+<form asp-action="Edit" method="post">
+
+    <input type="hidden" asp-for="Id" />
 
     <div class="mb-3">
         <label>Name</label>
@@ -29,6 +31,7 @@
     </div>
 
     <button type="submit" class="btn btn-primary">Save</button>
+
     <a asp-action="Index" class="btn btn-secondary">Back</a>
 
 </form>
